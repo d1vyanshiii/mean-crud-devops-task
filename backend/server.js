@@ -1,7 +1,13 @@
 const express = require("express");
-//const cors = require("cors");
+const cors = require("cors");
 
 const app = express();
+
+app.use(cors({
+  origin: "*", // allow all origins (or restrict to your EC2 IP/frontend domain later)
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+}));
 
 // parse requests of content-type - application/json
 app.use(express.json());
