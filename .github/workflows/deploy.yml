@@ -39,3 +39,8 @@ jobs:
             git pull origin main
             docker-compose pull
             docker-compose up -d
+            - name: Check running containers
+
+        run: |
+          ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@${{ secrets.VM_HOST }} \
+          "docker ps"
