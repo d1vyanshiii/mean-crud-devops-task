@@ -24,8 +24,6 @@ This project demonstrates containerization, deployment, and CI/CD for a MEAN CRU
   * Backend → `d1vyanshiii/backend:latest`
 * **Docker Compose** is used to deploy on the EC2 VM.
 
-### 📸 Screenshots to add:
-
 ![Frontend Docker Image](screenshots/dockerhub-frontend.png)
 ![Backend Docker Image](screenshots/dockerhub-backend.png)
 
@@ -36,7 +34,6 @@ This project demonstrates containerization, deployment, and CI/CD for a MEAN CRU
 * Using **official MongoDB Docker image** in `docker-compose.yml`.
 * This ensures MongoDB runs as a service alongside backend and frontend.
 
-### 📸 Screenshot to add:
 
 ![Mongo Container](screenshots/mongo-container.png)
 
@@ -51,8 +48,6 @@ This project demonstrates containerization, deployment, and CI/CD for a MEAN CRU
   2. Pushes them to Docker Hub.
   3. SSHs into EC2 and redeploys via Docker Compose.
 
-### 📸 Screenshots to add:
-
 ![CI/CD Success](screenshots/github-actions-success.png)
 ![CI/CD Logs](screenshots/github-actions-logs.png)
 
@@ -62,8 +57,6 @@ This project demonstrates containerization, deployment, and CI/CD for a MEAN CRU
 
 * Configured Nginx on EC2 to route traffic to frontend (and backend via API).
 * Entire app is accessible on **port 80** using EC2’s Elastic IP.
-
-### 📸 Screenshots to add:
 
 ![Nginx Config](screenshots/nginx-config.png)
 ![App on Browser](screenshots/app-browser.png)
@@ -81,8 +74,6 @@ This project demonstrates containerization, deployment, and CI/CD for a MEAN CRU
 ---
 
 ## 🚀 Application Demo
-
-### 📸 Screenshot to add:
 
 ![App Demo](screenshots/app-demo.png)
 
