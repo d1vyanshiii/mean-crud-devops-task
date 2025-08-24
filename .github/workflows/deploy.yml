@@ -38,10 +38,13 @@ jobs:
             cd mean-crud-devops-task
             git pull origin main
             docker-compose pull
-            docker-compose up -d
-            - name: Check running containers
+            docker-compose up -d --remove-orphans
 
       - name: Check running containers
-        run: |
-          ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@${{ secrets.VM_HOST }} \
-          "docker ps"
+        uses: appleboy/ssh-action@v0.1.7
+        with:
+          host: ${{ secrets.VM_HOST }}
+          username: ${{ secrets.VM_USER }}
+          key: ${{ secrets.VM_SSH_KEY }}
+          script: |
+            docker ps
